@@ -9,7 +9,8 @@ import { IBug } from '../models/iBug';
         <span> / </span>
         <span>{{data.length}}</span>
     </section>
-    `
+    `,
+    styleUrls: ['bugsStats.style.css']
 })
 export class BugStatsComponent{
     @Input()
