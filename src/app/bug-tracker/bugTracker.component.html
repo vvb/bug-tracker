@@ -8,8 +8,8 @@
 </section>
 <section class="edit">
     <label for="">New Bug :</label>
-    <input type="text" name="" #txtBugName>
-    <input type="button" value="Save" (click)="onSaveClick(txtBugName.value)">
+    <input type="text" [(ngModel)]="newBugName">
+    <input type="button" value="Save" (click)="onSaveClick()">
 </section>
 <section class="list">
     <ol>
@@ -18,6 +18,6 @@
             <div class="datetime">[createdAt]</div>
         </li>
    </ol>
-    <input type="button" value="Remove Closed">
+    <input type="button" value="Remove Closed" (click)="onRemoveClosedClick()">
 </section>
 

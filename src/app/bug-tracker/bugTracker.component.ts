@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IBug } from './models/iBug';
+import { BugOperations } from './services/BugOperations.service';
 
 @Component({
     selector: 'bug-tracker',
@@ -8,26 +9,24 @@ import { IBug } from './models/iBug';
 })
 export class BugTrackerComponent {
     bugs : Array<IBug> = [];
+    newBugName : string = '';
+
+    constructor(public bugOperations : BugOperations) {
+    }
+
     onSaveClick(bugName : string){
-        var newBug : IBug = {
-            name: bugName,
-            isClosed: false
-        }
-        this.bugs.push(newBug); }
+        var newBug : IBug = this.bugOperations.createNew(this.newBugName);
+        this.bugs = this.bugs.concat([newBug]);
+    }
+
     onBugClick(bug: IBug) {
-        bug.isClosed = !bug.isClosed;
+        this.bugs = this.bugs.map( b =>
+            (b === bug) ? this.bugOperations.toggle(b):b
+            );
     }
-    getClosedCount(){
-        var result = 0;
-        for(var i=0; i < this.bugs.length; i++)
-        if (this.bugs[i].isClosed)
-            ++result;
-        return result;
-    }
+
     onRemoveClosedClick() {
-        for (var i=this.bugs.length-1; i>=0; i--)
-            if(this.bugs[i].isClosed)
-                this.bugs.splice(i,1);
+        this.bugs = this.bugs.filter(bug => !bug.isClosed);
     }
 }
 
