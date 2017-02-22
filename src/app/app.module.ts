@@ -6,11 +6,16 @@ import { UtilsModule } from './utils/utils.module'
 
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bug-tracker/bugTracker.component';
+import { BugStatsComponent } from './bug-stats/bugsStats.component';
+
+import { ClosedCountPipe } from './bug-tracker/pipes/closedCount.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
-    BugTrackerComponent
+    BugTrackerComponent,
+    BugStatsComponent,
+    ClosedCountPipe
   ],
   imports: [
     BrowserModule,

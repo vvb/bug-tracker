@@ -1,9 +1,5 @@
 <h1>Bug Tracker</h1>
-<section class="stats">
-    <span class="closed"> {{ getClosedCount() }} </span>
-    <span> / </span>
-    <span>{{bugs.length}}</span>
-</section>
+<bug-stats [data]="bugs"></bug-stats>
 <section class="sort">
     <label for="">Order By :</label>
     <input type="text" name="" id="">
