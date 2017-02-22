@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IBug } from '../models/iBug';
+import { IBug } from '../bug-tracker/models/iBug';
 
 @Component({
     selector: "bug-stats",
