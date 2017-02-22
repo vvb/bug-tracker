@@ -1,4 +1,4 @@
-import { IBug } from '../models/IBug';
+import { IBug } from '../models/iBug';
 
 export class BugOperations{
     createNew(id : number, bugName : string) : IBug{
@@ -6,7 +6,7 @@ export class BugOperations{
             id : id,
             name : bugName,
             isClosed : false,
-            createdAt: Date()
+            createdAt: new Date()
         }
     }
 
