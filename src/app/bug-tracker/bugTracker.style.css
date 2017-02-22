@@ -1,30 +1,30 @@
-section{
+/deep/ section{
     margin-bottom: 10px;
 }
-.closed{
+/deep/ .closed{
     color : red;
     font-weight: bold;
     text-decoration: line-through;
     font-style: italic;
 }
-.stats, .bugname{
+/deep/ .stats, .bugname{
     font-size: 22pt;
 }
-.bugname{
+/deep/ .bugname{
     cursor: pointer;
 }
-ol{
+/deep/ ol{
     list-style: none;
     width: 500px;
 }
-li{
+/deep/ li{
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 5px;
     background-color: #e7e7e7;
     border : 1px solid gray;
 }
-.datetime{
+/deep/ .datetime{
     font-style: italic;
     font-size: small;
 }
