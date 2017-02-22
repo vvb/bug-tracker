@@ -1,18 +1,19 @@
-import { IBug } from '../models/iBug';
+import { IBug } from '../models/IBug';
 
-export class BugOperations {
-    createNew(bugName : string) : IBug {
-        return {
-            name : bugName,
-            isClosed : false
-        };
-    }
+export class BugOperations{
+	createNew(id : number, bugName : string) : IBug{
+		return {
+			id : id,
+			name : bugName,
+			isClosed : false
+		}
+	}
 
-    toggle(bug : IBug) : IBug {
-        return {
-            name : bug.name,
-            isClosed : !bug.isClosed
-        };
-    }
+	toggle(bug : IBug) : IBug{
+		return {
+			id : bug.id,
+			name : bug.name,
+			isClosed : !bug.isClosed
+		};
+	}
 }
-
