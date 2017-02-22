@@ -11,7 +11,7 @@
     <ol>
         <li *ngFor="let bug of bugs">
             <span class="bugname" [ngClass]="{closed : bug.isClosed}" (click)="onBugClick(bug)">{{bug.name | trimtext:40 }}</span>
-            <div class="datetime">[createdAt]</div>
+            <div class="datetime">{{ bug.createdAt }}</div>
         </li>
    </ol>
     <input type="button" value="Remove Closed" (click)="onRemoveClosedClick()">
