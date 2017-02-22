@@ -6,11 +6,7 @@
     <label for="">Descending ? :</label>
     <input type="checkbox" name="" id="">
 </section>
-<section class="edit">
-    <label for="">New Bug :</label>
-    <input type="text" [(ngModel)]="newBugName">
-    <input type="button" value="Save" (click)="onSaveClick()">
-</section>
+<bug-edit (onNewBug)="onSaveClick($event)"></bug-edit>
 <section class="list">
     <ol>
         <li *ngFor="let bug of bugs">

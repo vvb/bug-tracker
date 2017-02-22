@@ -16,7 +16,7 @@ export class BugTrackerComponent {
     }
 
     onSaveClick(bugName : string){
-        var newBug : IBug = this.bugStorage.addNew(this.newBugName);
+        var newBug : IBug = this.bugStorage.addNew(bugName);
         this.bugs = this.bugs.concat([newBug]);
     }
 

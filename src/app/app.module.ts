@@ -11,13 +11,15 @@ import { BugStatsComponent } from './bug-stats/bugsStats.component';
 import { ClosedCountPipe } from './bug-tracker/pipes/closedCount.pipe';
 import { BugOperations } from './bug-tracker/services/BugOperations.service';
 import { BugStorage } from './bug-tracker/services/BugStorage.service';
+import { BugEditComponent } from './bug-edit/bugEdit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BugTrackerComponent,
     BugStatsComponent,
-    ClosedCountPipe
+    ClosedCountPipe,
+    BugEditComponent
   ],
   imports: [
     BrowserModule,
