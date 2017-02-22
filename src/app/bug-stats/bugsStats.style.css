@@ -1,0 +1,7 @@
+.closed{
+    color : blue;
+    font-weight: bold;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
