@@ -2,23 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { UtilsModule } from './utils/utils.module'
 
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bug-tracker/bugTracker.component';
-import { GetClosedCountPipe } from './bug-tracker/pipes/getClosedCount.pipe';
-import { TrimTextPipe } from './bug-tracker/pipes/trimText.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BugTrackerComponent,
-    GetClosedCountPipe,
-    TrimTextPipe
+    BugTrackerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    UtilsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

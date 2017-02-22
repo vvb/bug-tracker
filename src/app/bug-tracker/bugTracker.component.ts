@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IBug } from './models/iBug';
-import { GetClosedCountPipe } from './pipes/getClosedCount.pipe';
-import { TrimTextPipe } from './pipes/trimText.pipe';
 
 @Component({
     selector: 'bug-tracker',
